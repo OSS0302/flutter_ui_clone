@@ -29,7 +29,6 @@ class _StarbucksScreenState extends State<StarbucksScreen> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-
         body: _screens[_currentIndex],
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
@@ -42,13 +41,11 @@ class _StarbucksScreenState extends State<StarbucksScreen> {
             });
           },
           items: const [
-            // 하단 탭 메뉴 아이템 1
             BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined),
               activeIcon: Icon(Icons.home),
               label: 'home',
             ),
-            // 하단 탭 메뉴 아이템 2
             BottomNavigationBarItem(
               icon: Icon(Icons.credit_card_outlined),
               activeIcon: Icon(Icons.credit_card),
