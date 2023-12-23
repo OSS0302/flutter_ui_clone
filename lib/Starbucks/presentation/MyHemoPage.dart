@@ -20,38 +20,39 @@ class _MyHomePageState extends State<MyHomePage> {
             expandedHeight: 300,
             flexibleSpace: FlexibleSpaceBar(
                 background: Column(
-              children: [
-                Image.asset('assets/studucsMain.png'),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Column(
-                          children: [
-                            const Text(
-                              '1 * until Green Level',
+                  children: [
+                    Image.asset('assets/studucsMain.png'),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              children: [
+                                const Text(
+                                  '1 * until Green Level',
+                                ),
+                                LinearProgressIndicator(
+                                  value: 20 / 25,
+                                  minHeight: 8,
+                                  borderRadius: BorderRadius.circular(12),
+                                  valueColor: const AlwaysStoppedAnimation<
+                                      Color>(
+                                      Colors.green),
+                                ),
+                              ],
                             ),
-                            LinearProgressIndicator(
-                              value: 20 / 25,
-                              minHeight: 8,
-                              borderRadius: BorderRadius.circular(12),
-                              valueColor: const AlwaysStoppedAnimation<Color>(
-                                  Colors.green),
-                            ),
-                          ],
-                        ),
+                          ),
+                          const Spacer(),
+                          const Text(
+                            '4/5 ★ ',
+                            style: TextStyle(fontSize: 30),
+                          ),
+                        ],
                       ),
-                      const Spacer(),
-                      const Text(
-                        '4/5 ★ ',
-                        style: TextStyle(fontSize: 30),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            )),
+                    )
+                  ],
+                )),
             bottom: const PreferredSize(
               preferredSize: Size.fromHeight(80.0),
               child: Row(
@@ -79,25 +80,50 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
-                width: MediaQuery.of(context).size.width * 0.2,
+                width: MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.2,
                 child: Image.asset('assets/Starad.png'),
               ),
             ),
           ),
           SliverToBoxAdapter(
             child: SizedBox(
-              width: MediaQuery.of(context).size.width * 0.2,
+              width: MediaQuery
+                  .of(context)
+                  .size
+                  .width * 0.2,
               child: Image.asset('assets/crismas.png'),
             ),
           ),
           SliverToBoxAdapter(
-            child: Container(width: 420, height: 400, child: scrollView()),
+            child: Row(children: [
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text('What New',style: TextStyle(fontSize: 40),),
+                ),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text('See all',style: TextStyle(fontSize: 20 ,color: Colors.green),),
+                ),
+            ],),
+            ),
+          SliverToBoxAdapter(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+
+                Container(width: 400, height: 330, child: scrollView()),
+              ],
+            ),
           ),
           SliverToBoxAdapter(
             child: Container(
-              width: double.infinity,
-              height: 200.0,
-              color: Colors.green,
+              width: 400,
+              height: 420,
+              child: Image.asset('assets/crismas.png'),
             ),
           ),
         ],
@@ -110,21 +136,20 @@ class _MyHomePageState extends State<MyHomePage> {
       scrollDirection: Axis.horizontal,
       children: [
         Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Row(
-              children: [
-                SizedBox(width: 19, child: Text('dd')),
-                SizedBox(width: 19, child: Text('dd')),
-              ],
-            ),
             Expanded(
               child: Row(
                 children: [
                   Container(
                     width: 400,
-                    height: 400,
-                    child: Image.asset('assets/04_01_cardnews.png'),
+                    height: 300,
+                    color: Colors.cyan,
+                    child: Column(
+                      children: [
+                        Image.asset('assets/04_01_cardnews.png', fit:BoxFit.fill,),
+                        Text('dddd'),
+                      ],
+                    ),
                   ),
                   Container(
                     width: 400,
