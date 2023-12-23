@@ -9,7 +9,6 @@ class StarbucksScreen extends StatefulWidget {
 }
 
 class _StarbucksScreenState extends State<StarbucksScreen> {
-
   int _currentIndex = 0;
   final List<Widget> _screens = [
     MyHomePage(),
@@ -54,7 +53,7 @@ class _StarbucksScreenState extends State<StarbucksScreen> {
             BottomNavigationBarItem(
               icon: Icon(Icons.coffee_outlined),
               activeIcon: Icon(Icons.coffee),
-              label: 'pay',
+              label: 'Order',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.shopping_bag_outlined),
@@ -67,10 +66,10 @@ class _StarbucksScreenState extends State<StarbucksScreen> {
               label: 'Other',
             ),
           ],
+
         ),
+
       ),
     );
   }
-
-
 }
