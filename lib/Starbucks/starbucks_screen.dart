@@ -66,9 +66,7 @@ class _StarbucksScreenState extends State<StarbucksScreen> {
               label: 'Other',
             ),
           ],
-
         ),
-
       ),
     );
   }

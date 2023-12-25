@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_clone/Starbucks/starbucks_screen.dart';
+import 'package:ui_clone/kakaoTalk/kakao_bottom_bar.dart';
+import 'package:ui_clone/ui.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StarbucksScreen()
+      home: const StarbucksScreen(),
     );
   }
 }
